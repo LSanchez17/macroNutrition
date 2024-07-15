@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Burger",
+        "protein": 10,
+        "carbs": 20,
+        "fats": 15
+    },
+    {
+        "name": "Pizza",
+        "protein": 15,
+        "carbs": 25,
+        "fats": 20
+    },
+    {
+        "name": "Pasta",
+        "protein": 5,
+        "carbs": 30,
+        "fats": 10
+    },
+    {
+        "name": "Salad",
+        "protein": 5,
+        "carbs": 10,
+        "fats": 5
+    },
+    {
+        "name": "Steak",
+        "protein": 25,
+        "carbs": 5,
+        "fats": 15
+    },
+    {
+        "name": "Chicken",
+        "protein": 20,
+        "carbs": 5,
+        "fats": 10
+    },
+    {
+        "name": "Fish",
+        "protein": 20,
+        "carbs": 5,
+        "fats": 10
+    },
+    {
+        "name": "Rice",
+        "protein": 5,
+        "carbs": 30,
+        "fats": 5
+    },
+    {
+        "name": "Bread",
+        "protein": 5,
+        "carbs": 20,
+        "fats": 5
+    },
+    {
+        "name": "Egg",
+        "protein": 10,
+        "carbs": 5,
+        "fats": 5
+    },
+    {
+        "name": "Milk",
+        "protein": 5,
+        "carbs": 10,
+        "fats": 5
+    }
+]
