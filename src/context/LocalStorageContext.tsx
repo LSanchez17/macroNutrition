@@ -4,6 +4,7 @@ import { Macros } from '../types/types';
 type LocalStorageContextType = {
     macros: Macros;
     updateMacros: (foodMacros: Macros) => void;
+    updateSpecificMacros: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 };
 
 const LocalStorageContext = createContext<LocalStorageContextType | undefined>(undefined);
@@ -40,8 +41,14 @@ export const LocalStorageContextProvider: React.FC<LocalStorageContextProviderPr
         localStorage.setItem('macros', JSON.stringify(differenceInMacros));
     };
 
+    const updateSpecificMacros = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setMacros({ ...macros, [name]: Number(value) });
+        localStorage.setItem('macros', JSON.stringify({ ...macros, [name]: Number(value) }));
+    };
+
     return (
-        <LocalStorageContext.Provider value={{ macros, updateMacros }}>
+        <LocalStorageContext.Provider value={{ macros, updateMacros, updateSpecificMacros }}>
             {children}
         </LocalStorageContext.Provider>
     );
