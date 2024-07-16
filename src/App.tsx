@@ -1,14 +1,11 @@
-import { MacroDisplay } from './components/MacroDisplay'
-import { FoodOptions } from './components/FoodOptions'
-
 import './App.css'
+import { UserMacros } from './components/UserMacros'
 
 function App() {
 
   return (
     <div className='container'>
-        <MacroDisplay />
-        <FoodOptions />
+        <UserMacros />
     </div>
   )
 }
