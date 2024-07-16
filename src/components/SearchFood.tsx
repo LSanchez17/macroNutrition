@@ -1,20 +1,23 @@
+import { Input } from "@mui/base";
 import { Macros } from "../types/types";
+import { useState } from "react";
+import { FoodList } from "./FoodList";
 
 interface SearchFoodProps {
     onFoodSelected: (foodMacros: Macros) => void;
 }
 
 export const SearchFood: React.FC<SearchFoodProps> = ({onFoodSelected}) => {
-
-    const handleClick = () => {
-        onFoodSelected({ protein: 10, carbs: 20, fats: 30 });
+    const [searchTerm, setSearchTerm] = useState('');  
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(e.target.value);
     }
 
     return (
         <div className='search-food'>
             <h2>Search for Food</h2>
-            <input type='text' placeholder='Search for food...' />
-            <button onClick={handleClick}>Add Food</button>
+            <Input type='text' placeholder='Search for food...' onChange={handleChange} />
+            <FoodList searchTerm={searchTerm} onFoodSelected={onFoodSelected}/>
         </div>
     )
 }
