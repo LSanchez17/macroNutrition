@@ -14,9 +14,14 @@ const useGetLocalStorage = (key: string) => {
     useEffect(() => {
         const storedData = localStorage.getItem(keyToSearch);
         if (storedData) {
-            setData(JSON.parse(storedData));
+            try {
+                setData(JSON.parse(storedData));
+            }
+            catch (e) {
+                console.error(e);
+            }
         }
-    }, [key]);
+    }, [key, keyToSearch]);
 
     return data;
 };
