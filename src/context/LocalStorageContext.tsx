@@ -41,7 +41,7 @@ export const LocalStorageContextProvider: React.FC<LocalStorageContextProviderPr
         localStorage.setItem('macros', JSON.stringify(differenceInMacros));
     };
 
-    const updateSpecificMacros = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const updateSpecificMacros = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setMacros({ ...macros, [name]: Number(value) });
         localStorage.setItem('macros', JSON.stringify({ ...macros, [name]: Number(value) }));
