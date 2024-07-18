@@ -15,8 +15,8 @@ export const SearchFood: React.FC<SearchFoodProps> = ({onFoodSelected}) => {
 
     return (
         <div className='search-food'>
-            <h2>Search for Food</h2>
-            <Input type='text' placeholder='Search for food...' onChange={handleChange} />
+            <h4>Search for Food</h4>
+            <Input type='text' className="foodInput" placeholder='Search for food...' onChange={handleChange} />
             <FoodList searchTerm={searchTerm} onFoodSelected={onFoodSelected}/>
         </div>
     )

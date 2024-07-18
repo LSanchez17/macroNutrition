@@ -22,9 +22,9 @@ export const UserMacros = () => {
                 )}
                 {!editMacros && (
                     <>
-                        <p>Protein: {macros.protein}g</p>
-                        <p>Carbs: {macros.carbs}g</p>
-                        <p>Fats: {macros.fats}g</p>
+                        <span>Protein: {macros.protein}g</span>
+                        <span>Carbs: {macros.carbs}g</span>
+                        <span>Fats: {macros.fats}g</span>
                     </>
                 )}
             </div>

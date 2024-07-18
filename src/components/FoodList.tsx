@@ -23,9 +23,9 @@ export const FoodList: React.FC<FoodListProps> = ({ searchTerm, onFoodSelected }
             {matches.map((food, idx) => (
                 <div key={idx} className='food-item'>
                     <h3>{food.name}</h3>
-                    <p>Protein: {food.protein}g</p>
-                    <p>Carbs: {food.carbs}g</p>
-                    <p>Fats: {food.fats}g</p>
+                    <span>Protein: {food.protein}g</span>
+                    <span>Carbs: {food.carbs}g</span>
+                    <span>Fats: {food.fats}g</span>
                     <Button onClick={() => handleClick(food)}>Add Food</Button>
                 </div>
             ))}
